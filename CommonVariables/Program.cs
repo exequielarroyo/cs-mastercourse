@@ -22,3 +22,11 @@ var data = @$"\n hello world {age}";
 Console.WriteLine(state.GetType());
 Console.WriteLine(state.Equals(city));
 Console.WriteLine($"{name} {age}");
+
+public class Samle
+{
+    public static void MyMethod()
+    {
+        Console.WriteLine("I am fron CommonVariables");
+    }
+}
