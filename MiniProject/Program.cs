@@ -6,7 +6,7 @@ var name = Console.ReadLine();
 Console.Write("Enter your age: ");
 var age = int.Parse(Console.ReadLine());
 
-if (name == "Bob" && name == "Sue")
+if (name == "Bob" || name == "Sue")
 {
     Console.WriteLine($"Hello Professor {name}");
 }
