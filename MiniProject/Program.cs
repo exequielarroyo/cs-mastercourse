@@ -1,21 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-Console.Write("Enter your name: ");
+﻿Console.Write("Enter your name: ");
 var name = Console.ReadLine();
 Console.Write("Enter your age: ");
-var age = int.Parse(Console.ReadLine());
+
+if (!int.TryParse(Console.ReadLine(), out int age))
+{
+    Console.WriteLine("You did not provide a valid age.");
+    return;
+}
+
+string formatedName = name;
 
 if (name == "Bob" || name == "Sue")
 {
-    Console.WriteLine($"Hello Professor {name}");
+    formatedName = $"Profession {name}";
 }
-else if (age < 21)
+
+if (age < 21)
 {
-    var needYears = 21 - age;
-    Console.WriteLine($"You should wait {needYears} more years");
+    Console.WriteLine($"I recommend you wait {21 - age} years, {formatedName}");
 }
 else
 {
-    Console.WriteLine("Welcome!");
+    Console.WriteLine($"Welcome to class {formatedName}");
 }
