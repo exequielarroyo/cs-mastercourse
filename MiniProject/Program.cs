@@ -15,9 +15,13 @@ if (name == "Bob" || name == "Sue")
     formatedName = $"Profession {name}";
 }
 
-if (age < 21)
+if (age < 21 && age > 0)
 {
     Console.WriteLine($"I recommend you wait {21 - age} years, {formatedName}");
+}
+else if (age < 0)
+{
+    Console.WriteLine($"Hi {formatedName}! Age must not be negative number.");
 }
 else
 {
