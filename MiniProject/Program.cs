@@ -12,7 +12,7 @@ string formatedName = name;
 
 if (name == "Bob" || name == "Sue")
 {
-    formatedName = $"Profession {name}";
+    formatedName = $"Professor {name}";
 }
 
 if (age < 21 && age > 0)
